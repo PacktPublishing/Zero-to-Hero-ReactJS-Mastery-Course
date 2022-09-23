@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+</head>
+
+<body>
+    <h2>Arrays in JS</h2>
+
+    <script>
+        //Array can keep more than one similar or non-similar items
+        let ageArray = [23, 34, 56, 31];//array of similar items
+        let names = ["John", "Peter", "Jane"];
+        let salaries = [5687.34, 16868.32, 2868.10];
+        let randomArray = [12, "Peter", 5678.99];
+        console.log(randomArray);
+        console.log(salaries);
+        //console.log(typeof (salaries));
+        console.log(salaries.length);
+        salaries = salaries.sort();
+        console.log("******salaries after sorting*******");
+        console.log(salaries);
+        salaries.push(888888.88);//adds new item at end of array
+        console.log(salaries);
+
+        //salaries.splice(salaries.length - 1, 1);//remove the last item
+        //console.log(salaries);
+
+        console.log("******salaries after addition*******");
+        //removes the 2 items from 0 d=index and adds 777 and 888 in their place
+        console.log(salaries.splice(0, 2, 777, 888));//index, no. of items to be removed or added
+        console.log(salaries);
+
+        console.log("******salaries after deletion*******");
+        console.log(salaries.splice(0, 2));//index, no. of items to be removed or added
+        console.log(salaries);
+
+        console.log(randomArray[2]);//gives item at 2nd index
+        console.log(randomArray[3]);//gives item at 3nd index i.e undefined
+
+        //let deptArray = new Array(4);//ite will create 4 empty items
+        let deptArray = new Array("Phy", "Chem", "Maths");
+        console.log(deptArray);
+        console.log(deptArray[0]);
+
+        console.log(typeof (deptArray));//Array in js is of type object
+
+        let student1 = {
+            name: "Peter",
+            rollNo: 567,
+            age: 23
+        };
+        let student2 = {
+            name: "John",
+            rollNo: 123,
+            age: 31
+        };
+        let students = [student1, student2]; //Array of objects
+        console.log(students);
+    </script>
+</body>
+
+</html>

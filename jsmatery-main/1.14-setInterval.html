@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval in JS</title>
+</head>
+
+<body id="bodyTag">
+    <h2>setInterval function JS</h2>
+    <div id="textArea">Time in seconds: <span id="seconds"></span> </div>
+    <script>
+        function display(empName, empDept) {
+            console.log("Name: " + empName + " & Department: " + empDept);
+        }
+        //display("John", "Phy");
+        //display("Peter", "Chemistry");
+
+        //setInterval(display, 2000);
+        //setInterval(display, 4000, "John", "PHY");//this function helps us execute more than once another function after a certain time(in ms)
+        let count = 0;
+        setInterval(function () {
+            count++;
+            document.querySelector('#seconds').innerHTML = count;
+            let color = `#${count}00${count}00`;
+            document.querySelector('#textArea').style.backgroundColor = color;
+        }, 1000);
+
+
+        let intervalId = setInterval(display, 5000, "John", "PHY");
+        console.log(`Interval Id is: ${intervalId}`);
+
+        //let's cancel the 10sec timeout with the help of intervalId
+        clearInterval(intervalId);
+    </script>
+</body>
+
+</html>

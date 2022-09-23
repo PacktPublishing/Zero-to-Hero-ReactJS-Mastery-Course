@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with JS</title>
+</head>
+
+<body>
+    <div id="header" class="layout">
+        <h2>Header section</h2>
+    </div>
+    <div id="main" class="layout">
+        <section id="left">
+            <ul class="left-menu">
+                <li>Products</li>
+                <li>Categories</li>
+                <li>Orders</li>
+            </ul>
+        </section>
+        <section id="center">
+            <h3>Hello world</h3>
+            <input id="fullName" type="text" placeholder="Full name" value="John Doe" />
+        </section>
+        <section id="right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, tempore!</p>
+        </section>
+    </div>
+    <div id="footer" class="layout">
+        @All rights reserved.
+    </div>
+
+    <script>
+        let mainElement = document.getElementById('main');
+        console.log(mainElement);
+
+        let fullName = document.getElementById('fullName');
+        console.log(fullName.value);
+
+        let rightElement = document.getElementById('right');
+        console.log(rightElement);
+
+        console.log(rightElement.innerHTML);
+
+        let layoutElements = document.getElementsByClassName('layout');
+        console.log(layoutElements);
+        console.log(layoutElements[2]);
+
+        let tagElements = document.getElementsByTagName('li');
+        console.log(tagElements);
+        console.log(tagElements[2]);
+        console.log(tagElements[2].innerHTML);
+        tagElements[2].innerHTML = "MyOrders";
+
+        //let selectorQuery = document.querySelector('section');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        //let selectorQuery = document.querySelector('.layout');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        //let selectorQuery = document.querySelector('#left');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        //let selectorQuery = document.querySelector('#left > ul');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        //let selectorQuery = document.querySelector('#left > ul > li');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        //let selectorQuery = document.querySelector('#left > .left-menu > li');//returns the 1st matching instance
+        //console.log(selectorQuery);
+
+        let selectorQuery = document.querySelectorAll('#left > .left-menu > li');//returns all the matching instance
+        console.log(selectorQuery);
+        selectorQuery[1].style.color = 'red';//makes the font color to red
+    </script>
+</body>
+
+</html>

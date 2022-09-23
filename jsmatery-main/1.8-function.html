@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+
+<body>
+    <h2>Function in JS</h2>
+    <ul>
+        <li>Function helps us avoid repeating code over and over again</li>
+        <li>Function is a piece of reusable code that will written once and used as many times as we want</li>
+        <li>Function starts with function keyword and has a name</li>
+        <li>Function can take paramater or they can be of non parameter</li>
+        <li>Function may of may not have a return type</li>
+        <li>Code inside a function only gets executed when its called</li>
+    </ul>
+    <script>
+
+        //defination of a function
+        //function with no parameter
+        function addNumbers() {
+            console.log(5 + 7);
+        }
+        addNumbers();//calling of function
+
+        //function with 2 parameters , num1 and num2
+        function addTwoNumbers(num1, num2) {
+            let result = num1 + num2;
+            console.log(result);//this function does not return anything to the callers
+        }
+        addTwoNumbers(3, 4);//calling of function with parameters
+
+        //function with 2 parameters , num1 and num2
+        function addTwoNumbersAndReturn(num1, num2) {
+            //debugger;
+            let result = num1 + num2;
+            return result;// this function return the output to the caller
+            console.log("this will not execute as its written after return statement");//this line will not get executed becz function has already return the control
+        }
+        addTwoNumbers(8, 9);//calling of function with parameters
+        let output = addTwoNumbersAndReturn(99, 1);//calling of function with parameters and accepting the return value
+        console.log(output);
+
+        //default value of parameter is only used if the value for that parameter is not passed by the caller
+        function add2NumWithReturnAndDefaultValue(num1, num2 = 5) {
+            return num1 + num2;
+        }
+        let out1 = add2NumWithReturnAndDefaultValue(22, 33);
+        console.log(out1);//55
+        out1 = add2NumWithReturnAndDefaultValue(22);//as num2 value is not passed so it will take default value as 5
+        console.log(out1);//27
+    </script>
+</body>
+
+</html>

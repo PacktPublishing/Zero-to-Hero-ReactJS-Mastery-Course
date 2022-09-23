@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else and Switch case</title>
+</head>
+
+<body>
+    <h2>If Else and Switch case, decision based program flow</h2>
+
+    <script>
+        let age = 18;
+
+        if (age > 18) {
+            //debugger;
+            console.log("Allowed for driving");
+        } else if (age === 18) {//=== checks the value and also the data type for doing comparision, but == only checks the value
+            console.log("You can now apply for driving license");
+        }
+        else {
+            console.log("Not allowed for driving");
+        }
+
+        const day = 3;
+        switch (day) {
+            case 1:
+                console.log("Today is Monday");
+                break;
+
+            case 3:
+                console.log("Today is Wednesday");
+                break;
+
+            case 6:
+                console.log("Today is Saturday");
+                break;
+
+            default:
+                console.log("I dont know what day it is today");
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
